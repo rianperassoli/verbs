@@ -4,11 +4,13 @@
 	<%= submit_tag("Search") %>
 <% end %>
 
+</p> 
+	Results for : "<%= @search_term %>" 
+</p>
+
 
 <% @search_results.each do |result| %>
 
 	<%= result.base %> <br>
 
 <% end %>
-
-<%= @search_term %>
