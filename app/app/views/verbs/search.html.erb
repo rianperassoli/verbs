@@ -8,9 +8,28 @@
 	Results for : "<%= @search_term %>" 
 </p>
 
+<table class="table table-hover">
+	<thead>
+	    <tr>
+	    	<th>Infinitive</th>
+	    	<th>Past</th>
+	    	<th>Past particle</th>
+	    	<th>Translation</th>
+	    </tr>
+	</thead>
 
-<% @search_results.each do |result| %>
+	<tbody>
+		
+		<% @search_results.each do |result| %>							
+		    <tr>    
+				<td><%= result.base %></td>
+				<td><%= result.past %></td>
+				<td><%= result.past_particle %></td>	
+				<td><%= result.translation %></td>
+			</tr>			
+		<% end %>
 
-	<%= result.base %> <br>
+	</tbody>
 
-<% end %>
+</table>
+		
