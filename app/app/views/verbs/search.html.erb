@@ -1,0 +1,14 @@
+<%= form_tag(root_path, method: "get") do %>
+	<%= label_tag(:query, "Insert a verb:") %>
+	<%= text_field_tag(:query) %>
+	<%= submit_tag("Search") %>
+<% end %>
+
+
+<% @search_results.each do |result| %>
+
+	<%= result.base %> <br>
+
+<% end %>
+
+<%= @search_term %>
